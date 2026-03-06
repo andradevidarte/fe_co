@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record id="view_account_journal_form_l10n_co_edi" model="ir.ui.view">
+            <field name="name">account.journal.form.l10n.co.edi</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='advanced_settings']" position="inside">
+                    <group string="DIAN">
+                        <field name="dian_document_type"/>
+                        <field name="dian_resolution_number"/>
+                        <field name="dian_resolution_date_from"/>
+                        <field name="dian_resolution_date_to"/>
+                        <field name="dian_prefix"/>
+                        <field name="dian_range_from"/>
+                        <field name="dian_range_to"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

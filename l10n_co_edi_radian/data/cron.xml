@@ -1,0 +1,5 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Future: cron to send pending events and sync -->
+    </data>
+</odoo>

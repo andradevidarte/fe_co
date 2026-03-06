@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record id="view_l10n_co_radian_event_tree" model="ir.ui.view">
+            <field name="name">l10n_co_radian.event.tree</field>
+            <field name="model">l10n_co_radian.event</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="create_date"/>
+                    <field name="company_id"/>
+                    <field name="event_type"/>
+                    <field name="state"/>
+                    <field name="move_id"/>
+                    <field name="related_uuid"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_l10n_co_radian_event_form" model="ir.ui.view">
+            <field name="name">l10n_co_radian.event.form</field>
+            <field name="model">l10n_co_radian.event</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="company_id"/>
+                            <field name="event_type"/>
+                            <field name="state"/>
+                            <field name="move_id"/>
+                            <field name="related_uuid"/>
+                            <field name="xml_attachment_id"/>
+                            <field name="response_attachment_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_l10n_co_radian_event" model="ir.actions.act_window">
+            <field name="name">RADIAN Events</field>
+            <field name="res_model">l10n_co_radian.event</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

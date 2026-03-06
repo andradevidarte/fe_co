@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <menuitem id="menu_l10n_co_edi_root"
+                  name="Colombia EDI"
+                  parent="account.menu_finance"
+                  sequence="90"/>
+
+        <menuitem id="menu_l10n_co_edi_configuration"
+                  name="Configuration"
+                  parent="menu_l10n_co_edi_root"
+                  sequence="10"/>
+
+        <menuitem id="menu_l10n_co_edi_operations"
+                  name="Operations"
+                  parent="menu_l10n_co_edi_root"
+                  sequence="20"/>
+
+        <menuitem id="menu_l10n_co_edi_queue"
+                  name="EDI Queue"
+                  parent="menu_l10n_co_edi_operations"
+                  action="action_l10n_co_edi_queue"
+                  sequence="10"/>
+
+        <menuitem id="menu_l10n_co_edi_log"
+                  name="Technical Log"
+                  parent="menu_l10n_co_edi_operations"
+                  action="action_l10n_co_edi_log"
+                  sequence="20"/>
+    </data>
+</odoo>

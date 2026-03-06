@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record id="view_move_form_l10n_co_edi" model="ir.ui.view">
+            <field name="name">account.move.form.l10n.co.edi</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="action_dian_queue_send"
+                            string="Send to DIAN"
+                            type="object"
+                            class="btn-primary"
+                            attrs="{'invisible': [('state','!=','posted')]}"/>
+
+                    <button name="action_dian_enable_contingency"
+                            string="Enable Contingency"
+                            type="object"
+                            groups="l10n_co_edi_base.group_l10n_co_edi_manager"/>
+
+                    <button name="action_dian_disable_contingency"
+                            string="Disable Contingency"
+                            type="object"
+                            groups="l10n_co_edi_base.group_l10n_co_edi_manager"/>
+                </xpath>
+
+                <xpath expr="//sheet/notebook" position="inside">
+                    <page string="DIAN EDI">
+                        <group>
+                            <field name="dian_edi_state" readonly="1"/>
+                            <field name="dian_is_document_support" readonly="1"/>
+                            <field name="dian_cufe" readonly="1"/>
+                            <field name="dian_uuid" readonly="1"/>
+                            <field name="dian_error_message" readonly="1"/>
+                        </group>
+                        <group string="Attachments">
+                            <field name="dian_xml_attachment_id" readonly="1"/>
+                            <field name="dian_application_response_attachment_id" readonly="1"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

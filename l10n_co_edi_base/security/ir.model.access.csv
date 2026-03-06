@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_l10n_co_edi_queue_user,l10n_co_edi.queue user,model_l10n_co_edi_queue,base.group_user,1,0,0,0
+access_l10n_co_edi_queue_manager,l10n_co_edi.queue manager,model_l10n_co_edi_queue,l10n_co_edi_base.group_l10n_co_edi_manager,1,1,1,1
+access_l10n_co_edi_log_manager,l10n_co_edi.log manager,model_l10n_co_edi_log,l10n_co_edi_base.group_l10n_co_edi_manager,1,1,1,1

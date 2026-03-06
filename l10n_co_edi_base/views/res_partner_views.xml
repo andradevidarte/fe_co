@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record id="view_partner_form_l10n_co_edi" model="ir.ui.view">
+            <field name="name">res.partner.form.l10n.co.edi</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='sales_purchases']" position="inside">
+                    <group string="DIAN / Documento Soporte">
+                        <field name="dian_is_not_obliged_to_invoice"/>
+                        <field name="dian_identification_type"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

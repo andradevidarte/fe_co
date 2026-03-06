@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record id="view_l10n_co_edi_queue_tree" model="ir.ui.view">
+            <field name="name">l10n_co_edi.queue.tree</field>
+            <field name="model">l10n_co_edi.queue</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="create_date"/>
+                    <field name="company_id"/>
+                    <field name="job_type"/>
+                    <field name="state"/>
+                    <field name="attempt_count"/>
+                    <field name="next_try_at"/>
+                    <field name="move_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_l10n_co_edi_queue_form" model="ir.ui.view">
+            <field name="name">l10n_co_edi.queue.form</field>
+            <field name="model">l10n_co_edi.queue</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="company_id"/>
+                            <field name="job_type"/>
+                            <field name="state"/>
+                            <field name="attempt_count"/>
+                            <field name="next_try_at"/>
+                            <field name="move_id"/>
+                            <field name="error_message"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_l10n_co_edi_queue" model="ir.actions.act_window">
+            <field name="name">EDI Queue</field>
+            <field name="res_model">l10n_co_edi.queue</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

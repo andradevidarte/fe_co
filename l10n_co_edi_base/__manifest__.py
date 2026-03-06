@@ -1,0 +1,27 @@
+{
+    "name": "Colombia EDI Base (DIAN/RADIAN) - Core",
+    "version": "18.0.1.0.0",
+    "category": "Accounting/Localizations",
+    "summary": "Base models, configuration, queue/log and fields for Colombian EDI (DIAN/RADIAN).",
+    "author": "andradevidarte",
+    "license": "LGPL-3",
+    "depends": [
+        "base",
+        "mail",
+        "account",
+    ],
+    "data": [
+        "security/security.xml",
+        "security/ir.model.access.csv",
+        "views/menu.xml",
+        "views/res_company_views.xml",
+        "views/res_partner_views.xml",
+        "views/account_journal_views.xml",
+        "views/account_move_views.xml",
+        "views/edi_queue_views.xml",
+        "views/edi_log_views.xml",
+        "data/cron.xml",
+    ],
+    "application": False,
+    "installable": True,
+}
